@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="{% static 'notes/darkly.css' %}" />
+
+    <title>Marknote</title>
+
+    <style>
+      html,
+      body {
+        min-height: 100vh;
+      }
+    </style>
+  </head>
+  <body
+    class="
+      d-flex
+      align-items-center
+      justify-content-center
+      container
+      col-lg-5 col-md-7 col-sm-11
+    "
+  >
+    <div class="pb-5">
+      <div class="p-4 border border-secondary rounded">
+        {% block body %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
